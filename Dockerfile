@@ -12,4 +12,4 @@ RUN bundle install
 ENV MONGO_URL mongodb://mongo/errbit_production
 
 EXPOSE 8080
-ENTRYPOINT ["rails", "server"]
+ENTRYPOINT ["rails", "server", "-b", "0.0.0.0", "-p", "8080"]
